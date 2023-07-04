@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 
 export async function getTodos() {
     try {
-        prisma = new PrismaClient()
+      const  prisma = new PrismaClient()
         const todos = await prisma.todo.findMany()
         return {todos}
     } catch (error) {
