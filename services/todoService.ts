@@ -26,5 +26,4 @@ export async function updateTodo(id: string, isCompleted:boolean) {
     } catch (error) {
         return({error})
     }
-    
 }
