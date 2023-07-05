@@ -46,4 +46,4 @@ import 'bootstrap/dist/css/bootstrap.min.css' on layout.tsx
 
 
 Deploying from source
-vercel
+vercel deploy

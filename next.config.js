@@ -2,7 +2,8 @@
 const nextConfig = {
     experimental:{
         serverActions:true,
-    }
+    },
+    runtime: 'edge',
 }
 
 module.exports = nextConfig
