@@ -4,8 +4,9 @@ import { NextRequest, NextResponse } from "next/server"
 export async function GET(req: NextRequest, res:NextResponse) {
     const result = await within(getTodos, res, 7000)
     console.log('ailab result: ', JSON.stringify( result))
-    return new Response(JSON.stringify( result))
+    // return new Response(JSON.stringify( result))
     // await within(getTodos, res, 7000)
+    return new Response('get result: ' + JSON.stringify( result))
 }
 
 async function within(fn:any, res:NextResponse, duration:any) {

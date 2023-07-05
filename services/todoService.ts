@@ -1,7 +1,11 @@
-import prisma from '@/lib/prisma'
+// import prisma from '@/lib/prisma'
+
+import { PrismaClient } from '@prisma/client'
 
 export async function getTodos() {
-    try {
+    try {       
+
+        let prisma = new PrismaClient()
         const todos = await prisma.todo.findMany()
         return {todos}
     } catch (error) {
@@ -11,6 +15,7 @@ export async function getTodos() {
 
 export async function createTodo(title:string){
     try{
+        let prisma = new PrismaClient()
         const todo = await prisma.todo.create({data:{title}})
         return {todo}
     }
@@ -21,6 +26,7 @@ export async function createTodo(title:string){
 
 export async function updateTodo(id: string, isCompleted:boolean) {
     try {
+        let prisma = new PrismaClient()
         const todo = await prisma.todo.update({where: {id},data:{isCompleted}})
         return {todo}
     } catch (error) {
