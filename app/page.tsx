@@ -16,6 +16,9 @@ export default async function Home() {
         <div>
           <Link href='/api/usersWithAction'>Server less Api with action server</Link>
         </div>
+        <div>
+          <Link href='/api/hello'>Cors Hello</Link>
+        </div>
       </div>
       <div className="mt-3">
         <h1>Todos</h1>
